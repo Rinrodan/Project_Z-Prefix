@@ -12,7 +12,7 @@ module.exports = {
       password: 'postgres',
       user: 'postgres',
       port: 5432,
-      database: 'inventory'
+      database: 'jimbobswholesale'
     }
   },
 
@@ -21,7 +21,7 @@ module.exports = {
     connection: {
       host: "localhost",
       port: 5432,
-      database: 'inventory',
+      database: 'jimbobswholesale',
       user:     'postgres',
       password: 'postgres'
     },
