@@ -19,4 +19,6 @@
  - We work alongside our robot overlords
  - Provide the best customer service on this planet
 ## Getting Started
-[__These Instructions__](https://github.com/Rinrodan/Project_Z-Prefix/gettingstarted.md)
+[__These Instructions__](https://github.com/Rinrodan/Project_Z-Prefix/blob/main/gettingstarted.md)
+
+
