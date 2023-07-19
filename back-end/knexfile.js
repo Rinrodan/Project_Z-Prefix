@@ -9,7 +9,7 @@ module.exports = {
     client: 'pg',
     connection: {
       host: '127.0.0.1',
-      password: 'docker',
+      password: 'postgres',
       user: 'postgres',
       port: 5432,
       database: 'inventory'
@@ -23,7 +23,7 @@ module.exports = {
       port: 5432,
       database: 'inventory',
       user:     'postgres',
-      password: 'docker'
+      password: 'postgres'
     },
     pool: {
       min: 2,
