@@ -29,6 +29,11 @@ app.get('/items', function(req,res) {
         })
     )
 })
+app.patch('/items/:id', (req, res) => {
+    let itemID = req.params.id;
+    knex('items').where({ id: itemID }).update(req.body).returning('*')
+        .then(function(data) {res.send(data)})
+})
 
 app.listen(port, () => console.log(`Express is on port ${port}.`))
 

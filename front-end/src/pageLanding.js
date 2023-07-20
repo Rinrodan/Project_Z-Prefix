@@ -1,7 +1,9 @@
 import React, { useState, useEffect, useContext } from 'react';
 import styles from './App.css'
+import LogIn from './Components/LogIn';
 import { ParentContext } from './App.js'
 import { Link } from 'react-router-dom';
+import Banner from './Components/Banner';
 
 
 
@@ -9,23 +11,38 @@ const Landing = () => {
 
 // const { itemslist } = useContext(ParentContext)
 
+// const [isShown, setIsShown] = useState(false);
+function changeBackground(e) {
+    e.target.style.background = 'red';
+    e.target.style.color = 'white';
+    e.target.style.scale = '2';
+    }
+function changeBackgroundBack(e) {
+    e.target.style.background = 'white';
+    e.target.style.color = 'black';
+    e.target.style.scale = '1';
+
+    }
 
     return (
         <div className='landing'>
-            <header>
-                <h1>HEADER</h1>
-                <h1>LANDING PAGE</h1>
+            <header className='header shadowLG'>
+                <Banner />
+                <LogIn />
             </header>
             <main>
-                <h1>MAIN</h1>
+                <div className='welcomeContainer'>
                 <Link to={`/home/`}>
-                    <div className='button welcome'>
-                        ENTER
-                    </div>
-                </Link>
+                        <div 
+                            className='button landingWelcome' onMouseOver={changeBackground} onMouseLeave={changeBackgroundBack}>
+                            ENTER
+                        </div>
+                    </Link>
+               
                 
+                </div>
             </main>
-            <footer><h1>FOOTER</h1></footer>
+            <footer></footer>
         </div>//home
     );
 }
@@ -47,3 +64,23 @@ export default Landing;
 // })
 // }            
 // </div>
+
+{/* <button
+        onMouseEnter={() => setIsShown(true)}
+        onMouseLeave={() => setIsShown(false)}>
+        
+        <Link to={`/home/`}>
+                        <div 
+                            className='button landingWelcome'
+                            onMouseEnter={() => setIsShown(true)}
+                            onMouseLeave={() => setIsShown(false)}>
+
+                            ENTER
+                        </div>
+                    </Link>
+      </button>
+      {isShown && (
+        <div>
+          I'll appear when you hover over the button.
+        </div>
+      )} */}
