@@ -2,9 +2,9 @@
 import './App.css';
 import React, { useState, useEffect, createContext } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Home from './pageHome';
-import Landing from './pageLanding'
-import admin from './pageAdminDashboardpage';
+import Home from './pageHome.js';
+import Landing from './pageLanding.js'
+// import admin from './pageAdminDashboardpage';
 export const ParentContext = createContext();
 
 function App() {
@@ -25,15 +25,9 @@ function App() {
   return (
     <ParentContext.Provider value={{ itemList, setItemList }}>
       <Routes>
-        <div className="App">
-          <header className="App-header">
-            <p>This is the front end landing page on:</p> 
-            <p style={{color: "red"}}>{window.location.href}</p>
-          </header>
-          <main>
-          </main>
-          <footer></footer>
-      </div>
+        <Route path={"/"} exact element={<Landing />} />
+        <Route path='/Home' element={<Home />} />
+        {/* <Route path={"/Admin"} exact element={<AdminDashboard />} /> */}
       </Routes>
     </ParentContext.Provider>
   );
