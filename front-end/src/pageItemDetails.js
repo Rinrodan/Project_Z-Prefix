@@ -27,7 +27,7 @@ const ItemDetailsPage = () => {
 
     return (
       <>
-      <div class="itemDetailsPageContainer">
+      <div className="itemDetailsPageContainer">
 
         <section className='itemCardContainer'>
           <div className="itemCard" key={`${item.id}`}>

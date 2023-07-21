@@ -1,25 +1,15 @@
-import React, { useState, useEffect, useContext, createContext} from 'react';
+import React, { useState, useEffect, useContext} from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import styles from './App.css'
 import LogIn from './Components/LogIn';
 import { ParentContext, GetThatIdToTheParent } from './App.js'
-
-import { useNavigate } from 'react-router-dom';
 import Banner from './Components/Banner';
-import ItemDetailsPage from './pageItemDetails';
-
-const Home = () => {
-
-const { itemsList, GetThatIdToTheParent } = useContext(ParentContext);
-const [itemId, setItemId] = useState([]);
 
 
+const Home = ({sendThatId}) => {
+
+const { itemsList, itemId } = useContext(ParentContext);
 console.log(itemsList);
-
-onTrigger = (event) => {
-    // Call the parent callback function
-    this.props.parentCallback(event.target.myname.id);
-    event.preventDefault();
+const [itemIdToSend, setItemIdToSend] = useState('')
 
 return (
     <>
@@ -43,8 +33,11 @@ return (
                         </div>
                         <div className='itemDescription'>{`${item.description}`}</div>
                         <div className='itemQuantity'>{`${item.quantity}`}</div>
-                        <Link to={`/ItemDetailsPage/${item.id}`} className="noDec" >
-                            <button onClick={this.onTrigger} className='itemDetailButton' id={`${item.id}`}>Details</button>
+                        <Link to={`/ItemDetailsPage/${item.id}`}>
+                            <button 
+                                onClick={e => setItemIdToSend(e.target.value)} className='itemDetailButton' 
+                                value={`${item.id}`}>Details
+                            </button>
                         </Link>
                     </div>
                     );
@@ -56,7 +49,7 @@ return (
             </div>{/* itemListContainer */}
         </main>
         <footer>footer</footer>
-        </div>//home
+        </div> {/* home */}
         </>
     );
 }
