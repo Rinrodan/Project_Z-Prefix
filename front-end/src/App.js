@@ -6,7 +6,8 @@ import Home from './pageHome.js';
 import Landing from './pageLanding.js'
 import ItemDetailsPage from './pageItemDetails';
 import ItemDetailsPageEDIT from './ItemDetailsPageEDIT'
-import EditButton from './Components/EditButton';
+import Dashboard from './pageAdminDashboard';
+
 // import admin from './pageAdminDashboardpage';
 export const ParentContext = createContext();
 
@@ -33,8 +34,9 @@ function App() {
         <Route path='/ItemDetailsPage/:itemId' element={<ItemDetailsPage />} />
         {/* <Route path={"/Admin"} exact element={<AdminDashboard />} /> */}
         <Route path='/ItemDetailsPageEDIT/:itemId' element={<ItemDetailsPageEDIT />} />
+        <Route path='/Dashboard' element={<Dashboard />} />
       </Routes>
-      <EditButton />
+    
     </ParentContext.Provider>
   );
 }

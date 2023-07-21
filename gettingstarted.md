@@ -12,9 +12,6 @@
 
 
 ## Step by step
-
-### FRONT END
-
 #### Github
 
 ```bash
@@ -24,17 +21,44 @@ git clone git@github.com:Rinrodan/Project_Z-Prefix.git
 cd Project_Z-Prefix
 ```
 ```bash
-cd front-end
+cd back-end
 ```
 ```bash
 npm install
 ```
+```bash
+npm start
+```
+Open up [](http://localhost:8080/)
 ---
 
-
-
-
 ### BACK END
+
+#### PostgresQL
+install PgAdmin
+![https://www.pgadmin.org/videos/](https://www.pgadmin.org/download/)
+
+```bash
+cd back-end
+```
+
+and follow these video tutorials 
+## [](https://www.pgadmin.org/videos/)
+
+``bash
+npm install pg pg-promise
+```
+
+use this sql file in PGadmin desktop app to create the two tables
+
+> back-end/public/Postgres_Create_Tables.sql
+
+
+|   |   |   |   |   |
+|---|---|---|---|---|
+|sudo -u postgres psql|\list|# CREATE DATABASE dbname|\c dbname|\dt|
+
+---
 
 #### Express Server
 
@@ -47,16 +71,25 @@ npm install express
 |install express pg knex|create/update app.js|package.json “start”; “node app.json”|
 
 ---
-#### PostgresQL
+
+### FRONT END
 
 ```bash
-npm install pg pg-promise
+cd front-end
 ```
-|   |   |   |   |   |
-|---|---|---|---|---|
-|sudo -u postgres psql|\list|# CREATE DATABASE dbname|\c dbname|\dt|
-
+```bash
+npm install
+```
+```bash
+npm start
+```
 ---
+
+
+
+
+
+
 
 #### Knex
 

@@ -1,9 +1,9 @@
 
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import React, { useContext, useState, useEffect} from 'react';
 import { ParentContext } from './App.js';
 
-import ItemDetailsPageEDIT from './ItemDetailsPageEDIT'
-import EditButton from './Components/EditButton';
+
 
 
 
@@ -37,7 +37,14 @@ const ItemDetailsPage = () => {
               </div>
               <div className='itemCardDescription'>{`${item.description}`}</div>
               <div className='itemCardQuantity'>{`${item.quantity}`}</div>
-              <EditButton />
+              <Link to={`/Home/`}>
+                            <button 
+                                className='backButton' 
+                                >Home
+                            </button>
+                        </Link>
+                        
+        
           </div>            
         </section>
       </div>

@@ -1,0 +1,102 @@
+
+
+.itemListContainerAuth{
+    display:flex;
+    justify-content: center;
+    width: fit-content;
+    height: auto;
+    margin: auto;
+    background-color: rgb(2, 65, 2);
+  padding: .2rem;
+  }
+  .itemListTitleAuth {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    width: 100%;
+    height: 5rem;
+    margin: auto;
+    margin-bottom: 5rem;
+    color: rgb(255, 0, 0);
+    text-shadow: 2px 2px 10px rgb(10, 10, 10);
+    padding: .2rem;
+  }
+  .itemListAuth {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    padding: 1%;
+    width: 70%;
+    min-width: 780px;
+    height: 60%;
+    background-color: rgb(192, 225, 7);
+  }
+  .itemTileAuth {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    vertical-align: middle;
+    width: 96%;
+    height: 5rem;
+    background-color: rgba(157, 207, 180, 0.785);
+    margin: auto;
+    margin-bottom: .5rem;
+    border: 2px solid rgba(0, 0, 0, 0.591);
+    border-radius: 3px;
+    padding: 0% 1rem;
+    
+  }
+  .itemNameAuth {
+    display: flex;
+    width: auto;
+    min-width: 10rem;
+    max-width: 20rem;
+    height: 1.3rem;
+    /* background-color: rgb(152, 145, 247); */
+    margin: auto;
+    text-align: center;
+    font-size: large;
+    font-weight: 600;
+  }
+  .itemDescriptionAuth {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80%;
+    height: 4rem;
+    overflow: scroll;
+    background-color: rgb(226, 243, 224);
+    margin: auto;
+    font-size: 1.5rem;
+    border-radius: 3px;
+  }
+  .itemQuantityAuth {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: 7rem;
+    min-width: 100px;
+    height: 1.3rem;
+    background-color: rgb(220, 245, 219);
+    margin: auto;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    border: 2px solid rgba(0, 0, 0, 0.75);
+    border-radius: 3px;
+  }
+  .itemDetailButtonAuth {
+    height: 1.3rem;
+    width: 4rem;
+    margin: auto;
+    margin-bottom: 1rem;
+  }
+  .itemDetailsButtonErrorMessageAuth {
+  display: flex;
+  margin: auto;
+  height:80%;
+  width: 80%;
+  
+  }
